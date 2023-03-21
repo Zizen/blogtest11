@@ -1,0 +1,16 @@
+<main class="content">
+  <!--找尋所有關鍵字-->
+  <%
+  let allTags=[]
+  site.tags.data.forEach(e =>{
+    allTags.push(e.name)
+  })
+  %>
+  <div class="topic-block container">
+      <% allTags.forEach(tag => { %>
+        <a href="/tags/<%= tag %>/">
+          <span><%= tag %></span>
+        </a>
+      <% }); %>
+  </div>
+</main>
